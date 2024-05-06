@@ -92,7 +92,7 @@ button{
 svg{
     display: none;
 }
-/* 768px 이하일 때 */
+/* 920px 이하일 때 */
 @media screen and (max-width: 920px) {
     svg {
         display: block;
