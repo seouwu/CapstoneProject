@@ -11,4 +11,7 @@ document.getElementById('exit').addEventListener('click',function(){
     if (SideMenu.style.display==='block') {
         SideMenu.style.display='none';
     }
+    else{
+        SideMenu.style.display='none';
+    }
 })
