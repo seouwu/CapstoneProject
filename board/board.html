@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="board.css">
+    <!-- title -->
+    <title>게시판</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="board">
+            <form action="#" method="post">
+                <h3 name="student_board" id="board_name">학생 게시판</h3>
+                <div>
+                    <!-- 상단바 -->
+                    <div id="board_up" class="board">
+                            <h3>제목</h3>
+                            <input name="title" type="text">
+                    </div>
+                    <div id="board_nav">
+                        <div>
+                            <h3>작성일:</h3>
+                            <h3 name="writeDate" id="writeDate">날짜</h3>
+                        </div>
+                        <div>
+                            <h3>작성자:</h3>
+                            <h3 name="writerName" id="writerName">작성자 이름</h3>
+                        </div>
+                    </div>
+                    <!-- 글쓰는 곳 -->
+                    <div id="board_mid" class="board">
+                        <h3>내용</h3>
+                        <textarea name="writeThing" id="writeThing">
+                        </textarea>
+                    </div>
+                    <!-- 하단바 -->
+                    <div id="board_down">
+                        <button name="submit" type="submit">
+                            글 쓰기
+                        </button>
+                    </div>
+                </div>
+                <div class="board">
+                    <input type="text" name="reply" id="reply">
+                    <button type="submit">댓글달기</button>
+                </div>
+                <div id="" class="board">
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="board.js"></script>
+</body>
+</html>
