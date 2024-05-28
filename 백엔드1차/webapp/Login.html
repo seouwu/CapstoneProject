@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/Login.css">
+</head>
+<body>
+    <header>
+        <div id="Logo">
+            <h1 id="logo">
+                <a href="#">컴퓨터 소프트웨어 학과</a>
+            </h1>
+        </div>
+        <div id="Menu">
+            <ul id="menu">
+                <li><a href="#">학과안내</a></li>
+                <li><a href="#">교과과정</a></li>
+                <li><a href="#">취업/게시판</a></li>
+                <li><a href="#">수강/민원</a></li>
+                <li><a href="#">이용시설</a></li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg></li>
+             </ul>
+        </div>
+    </header>
+    <div id="LoginBox">
+        <h2>로그인</h2>
+        <div id="LoginBar">
+            <form action="Login.jsp" method="post">
+                <input type="text" name="id" class="login">
+                <input type="password" name="pw" class="login">
+                <div id="LoginOther">
+                    <label for="Remember" ><input type="checkbox" name="Remember"><span>ID 기억하기</span></label>
+                    <a href="#">아이디/비밀번호 찾기</a>
+                </div>
+                <button type="submit">로그인</button>
+                <a href="#">아직 회원이 아니신가요?</a>
+            </form>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="Login.js"></script>
+</body>
+</html>
