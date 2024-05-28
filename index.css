@@ -15,13 +15,13 @@ body{
 #box{
     position: relative;
     width: 100%;
-    height: 2300px;
+    height: 2100px;
 }
 /* main 공통 */
 .mains{
     position: relative;
     width: 1280px;
-    height: 800px;
+    height: 600px;
     margin: auto;
 }
 .mains>*{
@@ -63,7 +63,7 @@ button i{
 /* main board */
 #main_board{
     position: relative;
-    padding-top: 0;
+    padding-top: 5rem;
     height: 1080px;
     text-align: center;
 }
@@ -152,10 +152,9 @@ button i{
 footer{
     position: relative;
     width: 100%;
-    height: 10rem;
+    height: 20rem;
     bottom: 0;
     margin: 0;
-    padding: 2rem;
     text-align: center;
     color: var(--white);
     background: var(--black);
