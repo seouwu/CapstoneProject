@@ -91,7 +91,7 @@ import java.util.Vector;
            pstmt.setString(1, id);
            rs = pstmt.executeQuery();
            if (rs.next()) {
-        	   if (rs.getString(1).contentEquals(pw)) {
+        	   if (rs.getString(6).equals(pw)) {
         		   return 1; //로그인 성공
         	   } else {
         		   return 0; //비밀번호 불일치
