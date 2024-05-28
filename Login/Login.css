@@ -1,0 +1,253 @@
+:root{
+    --main-color:#1C438F;
+    --fontColor:black;
+    --backColor:#f7f7f7;
+    --shadowColor:#aab2c1
+}
+/* all */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 1000px;
+    background: var(--backColor);
+}
+
+#Box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+a{
+    color: var(--fontColor);
+    text-decoration: none;
+    z-index: 100;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* Login */
+#LoginBox{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    top: 27%;
+    margin: auto auto;
+    border-radius: 2rem;
+    transform: translate(-50% -50%);
+    background: rgba(255, 255, 255, 0.774);
+}
+#Login{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    margin: auto;
+    transform: translate(-50% -50%);
+}
+h2{
+    position: relative;
+    height: 20%;
+    top: 2rem;
+    font-size: 3rem;
+    margin: auto;
+}
+form{
+    position: relative;
+    width: 100%;
+    height: 90%;
+}
+#LoginBar{
+    position: relative;
+    height: 90%;
+}
+.login{
+    position: relative;
+    display: flex;
+    top: 1rem;
+    width: 90%;
+    height: 20%;
+    margin: 0 auto 1rem auto;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+}
+.login:focus{
+    border: 5px solid var(--main-color);
+}
+#btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: -10rem;
+    border: none;
+    font-weight: 900;
+    color: var(--backColor);
+    background: var(--main-color);
+    cursor: pointer;
+}
+#LoginOther{
+    position: relative;
+    width: 90%;
+    top: -6rem;
+    margin: auto;
+}
+label>input{
+    position: relative;
+    zoom: 2;
+    cursor: pointer;
+}
+ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    list-style: none;
+}
+#sign{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: -4rem;
+    font-size: 1.5rem;
+}
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+body>header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    background: #f7f7f7;
+    z-index: 100;
+    box-shadow: 0 0.5em 1em #aab2c1;
+}
+#Logo{
+    background-color: var(--main-color);
+    padding: 0.5em;
+}
+#logo>a{
+    font-size: 0.9em;
+    padding: 1em;
+    color: white;
+}
+#Menu{
+    margin-top: auto;
+    margin-bottom: 1em;
+}
+header>#Menu>#menu{
+    position: relative;
+    display: flex;
+    list-style: none;
+    background: #f7f7f7;
+}
+#menu>li>a{
+    position: relative;
+    padding-right: 2em;
+    color: rgb(0, 0, 0);
+    font-weight: 550;
+    text-shadow: 0 0.1em 1px #c0c6d4;
+}
+#menu>li>a:hover{
+    color:#1C438F;
+}
+body>#LoginBox{
+    position:absolute ;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    text-align: center;
+    border-radius: 20px;
+    background:#f7f7f7;
+    box-shadow: 0 0 100px 10px #d1d1d1;
+}
+input{
+    padding: 0 1em 0 1em;
+}
+button,.login{
+    position: relative;
+    display: block;
+    width: 90%;
+    height: 3em;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 5px;
+}
+.login{
+    border: 0.8px solid rgb(180, 180, 180);
+}
+button{
+    border: 1px solid #112656;
+    background:var(--main-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#LoginOther{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+svg{
+    display: none;
+}
+
+@media screen and (max-width: 920px) {
+    svg {
+        display: block;
+        cursor: pointer;
+        margin-right: 1em;
+    }
+    #menu>li>a{
+        display: none;
+}
+}
+#SideMenu{
+    position:absolute;
+    width: 33%;
+    height: 100%;
+    top:0;
+    right: 0;
+    border-radius: 10px 0 0 10px;
+    z-index: 200;
+    background: rgba(255, 255, 255, 0.874);
+    display: none;
+}
+#SideMenu>div{
+    position: relative;
+}
+#SideMenu>div>svg{
+    margin-left: auto;
+}
+#SideMenu>ul{
+    list-style: none;
+}
+#SideMenu>ul>li{
+    padding: 1.5em;
+    text-align: center;
+    font-weight: 900;
+}
+#SideMenu>ul>li:hover{
+    text-decoration: underline;
+} */
