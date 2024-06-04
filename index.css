@@ -1,0 +1,305 @@
+:root{
+    --main-color:#1C438F;
+    --shadown: rgba(236, 236, 236, 0.322);
+    --backgroundColor:rgb(217, 224, 238);
+    --black:rgb(44, 45, 46);
+    --white:rgb(252, 252, 252);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+#wrap{
+    min-width:1440px;
+    margin: 0 auto;
+}
+/* 메뉴바 */
+header{
+    position: fixed;
+    width: 100%;
+    min-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0 0.5rem 5px var(--shadown);
+    z-index: 200;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+#logo{
+    width: 20%;
+    max-width: 20rem;
+    padding: 1.5rem 1.5rem;
+    background: var(--main-color);
+}
+#logo a{
+    color: white;
+}
+#menu{
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2.5rem;
+    padding: auto;-bottom: 1.5rem;
+}
+.menus{
+    position: absolute;
+    width: 15%;
+}
+.menus h3{
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.menus h3:hover{
+    color: var(--main-color);
+}
+.menus h3:hover~ div{
+    display: block;
+    color: var(--main-color);
+}
+.menus div a:hover~ div a{
+    display: block;
+}
+.menus div{
+    text-align: center;
+    font-weight: 900;
+    display: none;
+    background: var(--white);
+}
+.menus div a{
+    position: relative;
+    display: block;
+    padding: 2rem 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.menus div a:hover{
+    display: block;
+    color: var(--white);
+    background:var(--main-color);
+}
+#login{
+    position: fixed;
+    top: 1rem;
+    right: 3rem;
+    font-size: 0.8rem;
+}
+#exit,#menubar{
+    font-size: 2rem;
+    display: none;
+}
+@media screen and (max-width:1200px) {
+    #menubar{
+        position: fixed;
+        display: block;
+        top: 2rem;
+        right: 2rem;
+    }
+    #exit{
+        position: relative;
+        top: 2rem;
+        right: 2rem;
+    }
+    #menu{
+        position: absolute;
+        width: 80%;
+        height: 100vh;
+        padding: 5rem;
+        right: 0;
+        display: none;
+        background: var(--white);
+        box-shadow: -1rem 0  1rem var(--shadown);
+        overflow-y: auto;
+        z-index: 200;
+    }
+    .menus{
+        position: relative;
+        width: 100%;
+        height: 20%;
+        display: flex;
+    }
+}
+/* main */
+#container{
+    position: relative;
+    width: 1440px;
+    margin: 0 auto;
+    background: var(--backgroundColor);
+    padding-top: 5rem;
+}
+#main{
+    position: relative;
+    width: 100%;
+}
+/* 이미지 */
+#imgContainer{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    min-height: 480px;
+    margin-bottom: 5rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+img{
+    position: relative;
+    width: 100%;
+    background: #1C438F;
+}
+/* 이미지 버튼 */
+#imgController{
+    position: relative;
+    width: 95%;
+    top: 45%;
+    transform: translate(-50% -50%);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+#imgControllerBtn{
+    position: relative;
+    width: 20%;
+    margin: 0 auto;
+    top: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#imgControllerBtn i{
+    font-size: 1.2rem;
+    color: var(--white);
+}
+button{
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+#imgController i{
+    font-size: 5rem;
+}
+/* 게시판 */
+#boardContainer{
+    position: relative;
+    min-width:1200px;
+    height: 1200px;
+}
+#board{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 3rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.boards{
+    position: relative;
+    border-radius: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+.boardHeader{
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: start;
+    color: var(--white);
+    background: var(--main-color);
+}
+.boardHeader a{
+    color: var(--white);
+}
+.boardHeader i{
+    position: absolute;
+    right: 5%;
+    font-size: 2rem;
+    font-weight: 900;
+}
+#board1 .boardHeader{
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2,1fr);
+}
+#board1 .boardHeader div{
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+.boardContents{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--white);
+}
+.contents{
+    position: relative;
+    height: 25%;
+    font-size: 2rem;
+    padding: 3rem 0 0 2rem;
+}
+.contents a{
+    color: var(--black);
+}
+/* 각종 링크들 */
+#linkContainer{
+    position: relative;
+    width: 100%;
+    padding-bottom: 6rem;
+}
+#link{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+#linkList{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+#linkList i{
+    position: relative;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 20px;
+    color: var(--black);
+    background: var(--white);
+}
+#linkList h6{
+    font-size: 1rem;
+    color:var(--black);
+}
+#linkList i:hover{
+    color: var(--white);
+    background: var(--main-color);
+}
+/* footer */
+#footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    color:var(--white);
+    background:var(--black)
+}
+#footerInfo{
+    width: 90%;
+    max-width: 1380px;
+    margin: 0 auto;
+}
