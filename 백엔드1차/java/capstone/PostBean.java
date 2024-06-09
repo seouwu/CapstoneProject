@@ -9,8 +9,17 @@ public class PostBean {
     private String p_student_number;
     private Timestamp post_writtendate; 
     private String management_access;
+    private String post_content;
 
-    public int getPost_num() {
+    public String getPost_content() {
+		return post_content;
+	}
+
+	public void setPost_content(String post_content) {
+		this.post_content = post_content;
+	}
+
+	public int getPost_num() {
         return post_num;
     }
 
