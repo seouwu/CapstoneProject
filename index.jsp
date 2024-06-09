@@ -63,18 +63,28 @@
                             </a>
                         </div>
                         <div class="boardContents">
-                            <div class="contents">
-                                <a href="#">1번째 내용입니다.</a>
-                            </div>
-                            <div class="contents">
-                                <a href="#">2번째 내용입니다.</a>
-                            </div>
-                            <div class="contents">
-                                <a href="#">3번째 내용입니다.</a>
-                            </div>
-                            <div class="contents">
-                                <a href="#">4번째 내용입니다.</a>
-                            </div>
+							  <% if (posts != null && !posts.isEmpty()) { 
+						        for (int i = 0; i < 4; i++) { 
+						            if (i < posts.size()) {
+						                PostBean post = posts.get(i); %>
+						                <div class="contents">
+						                    <a href="#">
+						                        <%= post.getPost_name() %> 
+						                        <%= post.getP_student_number() %> 
+						                        <%= post.getPost_writtendate() %>
+						                    </a>
+						                </div>
+						            <% } else { %>
+						                <div class="contents">
+						                    <a href="#"><%= (i+1) %>번째 게시물입니다.</a>
+						                </div>
+						            <% } 
+						        	} 
+							    } else { %>
+							        <div class="contents">
+							            <p>게시물이 없습니다.</p>
+							        </div>
+							<% } %>
                         </div>
                     </div>
                     <div id="board3" class="boards">
