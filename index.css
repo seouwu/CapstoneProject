@@ -272,21 +272,6 @@ button{
 .contents a{
     color: var(--black);
 }
-/* 취업 */
-.Info:last-child:focus~#boardContents1{
-    display: none;
-}
-.Info:last-child:focus~#boardContents2{
-    display: block;
-}
-.Info:last-child:focus~.Info:first-child{
-    color: var(--white);
-    background: var(--main-color);
-}
-.Info:last-child:focus{
-    color: var(--main-color);
-    background: var(--white);
-}
 /* 각종 링크들 */
 #linkContainer{
     position: relative;
