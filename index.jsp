@@ -3,16 +3,19 @@
 
 <jsp:useBean id="postMgr" class="capstone.PostMgr" scope="page" />
 <jsp:useBean id="announceMgr" class="capstone.AnnounceMgr" scope="page" />
+<jsp:useBean id="privateDAO" class="capstone.PrivateDAO" scope="page" />
 
 <%@ page import="capstone.PostBean" %>
 <%@ page import="capstone.AnnounceBean" %>
+<%@ page import="capstone.PrivateDTO" %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="javax.servlet.http.HttpServletRequest" %>
 
 <%
-    ArrayList<PostBean> posts = postMgr.getPosts();
-    ArrayList<AnnounceBean> anns = announceMgr.getAnnounce();
+	ArrayList<PostBean> posts = postMgr.getPosts();
+	ArrayList<AnnounceBean> anns = announceMgr.getAnnounce();
+	ArrayList<PrivateDTO> vecList = privateDAO.getMemberList();
 %>
 
 <!DOCTYPE html>
@@ -59,16 +62,20 @@
                            <% if (anns != null && !anns.isEmpty()) { 
 						        for (int i = 0; i < 4; i++) { 
 						            if (i < anns.size()) {
-						                AnnounceBean ann = anns.get(i); %>
+						                AnnounceBean ann = anns.get(i); 
+						                String postName = ann.getPost_name();
+						                if (postName.length() > 30) {
+					                        postName = postName.substring(0, 26) + "...";
+					                    }%>
 						                <div class="contents">
 						                    <a href="#">
-						                    	<%= ann.getPost_num() %>
-						                        <%= ann.getPost_name() %> 
-						                        <%= ann.getPost_writtendate() %>
+						                    	<%= ann.getPost_num() %>.
+						                        <%= postName %> 
 						                    </a>
 						                </div>
 						            <% } else { %>
 						                <div class="contents">
+						                <%= (i+1) %>.
 						                    <a href="#"><%= (i+1) %>번째 게시물입니다.</a>
 						                </div>
 						            <% } 
@@ -79,7 +86,7 @@
 							        </div>
 							<% } %>
                         </div>
-			<div id="boardContents2" class="boardContents">
+                        <div id="boardContents2" class="boardContents">
                             <div id="Othercontents" class="contents">
                                 <a href="#">취업 1번째 내용입니다.</a>
                             </div>
@@ -102,29 +109,46 @@
                             </a>
                         </div>
                         <div class="boardContents">
-							  <% if (posts != null && !posts.isEmpty()) { 
-						        for (int i = 0; i < 4; i++) { 
-						            if (i < posts.size()) {
-						                PostBean post = posts.get(i); %>
-						                <div class="contents">
-						                    <a href="#">
-                    	                        <%= post.getPost_num() %>
-						                        <%= post.getPost_name() %>
-						                        <%= post.getPost_writtendate() %>
-						                    </a>
-						                </div>
-						            <% } else { %>
-						                <div class="contents">
-						                    <a href="#"><%= (i+1) %>번째 게시물입니다.</a>
-						                </div>
-						            <% } 
-						        	} 
-							    } else { %>
-							        <div class="contents">
-							            <p>게시물이 없습니다.</p>
-							        </div>
-							<% } %>
-                        </div>
+    <% 
+        if (posts != null && !posts.isEmpty()) { 
+            for (int i = 0; i < 4; i++) { 
+                if (i < posts.size()) {
+                    PostBean post = posts.get(i);  
+                    String studentName;
+                    if ("x".equals(post.getP_student_number())) {
+                        studentName = "익명";
+                    } else {
+                        studentName = privateDAO.getStudentNameByNumber(post.getP_student_number());
+                    }
+    %>
+                    <div class="contents">
+                        <a href="#">
+                            <!-- 게시물 번호, 이름, 학생 이름을 출력 -->
+                            <%= post.getPost_num() %>.
+                            <%= post.getPost_name() %> - 
+                            <%= studentName %>
+                        </a>
+                    </div>
+    <% 
+                } else { 
+    %>
+                    <div class="contents">
+                        <%= (i+1) %>.
+                        <a href="#"><%= (i+1) %>번째 게시물입니다.</a>
+                    </div>
+    <% 
+                } 
+            } } else { 
+    %>
+        <div class="contents">
+            <p>게시물이 없습니다.</p>
+        </div>
+    <% 
+        } 
+    %>
+</div>
+
+
                     </div>
                     <div id="board3" class="boards">
                         <div class="boardHeader">
