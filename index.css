@@ -264,10 +264,9 @@ button{
     display: none;
 }
 .contents{
-    position: relative;
-    height: 25%;
-    font-size: 2rem;
-    padding: 3rem 0 0 2rem;
+	position: relative;
+    font-size: 1.3rem;
+	padding: 2.4rem 0 0 2rem;
 }
 .contents a{
     color: var(--black);
