@@ -3,10 +3,12 @@
 
 <jsp:useBean id="postMgr" class="capstone.PostMgr" scope="page" />
 <jsp:useBean id="announceMgr" class="capstone.AnnounceMgr" scope="page" />
+<jsp:useBean id="workMgr" class="capstone.WorkMgr" scope="page" />
 <jsp:useBean id="privateDAO" class="capstone.PrivateDAO" scope="page" />
 
 <%@ page import="capstone.PostBean" %>
 <%@ page import="capstone.AnnounceBean" %>
+<%@ page import="capstone.WorkBean" %>
 <%@ page import="capstone.PrivateDTO" %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
@@ -15,6 +17,7 @@
 <%
 	ArrayList<PostBean> posts = postMgr.getPosts();
 	ArrayList<AnnounceBean> anns = announceMgr.getAnnounce();
+	ArrayList<WorkBean> works = workMgr.getWorks();
 	ArrayList<PrivateDTO> vecList = privateDAO.getMemberList();
 %>
 
@@ -87,19 +90,35 @@
 							<% } %>
                         </div>
                         <div id="boardContents2" class="boardContents">
-                            <div id="Othercontents" class="contents">
-                                <a href="#">취업 1번째 내용입니다.</a>
-                            </div>
-                            <div class="contents">
-                                <a href="#">취업 2번째 내용입니다.</a>
-                            </div>
-                            <div class="contents">
-                                <a href="#">취업 3번째 내용입니다.</a>
-                            </div>
-                            <div class="contents">
-                                <a href="#">취업 4번째 내용입니다.</a>
-                            </div>
-                        </div>
+                        	
+                            <% if (works != null && !works.isEmpty()) { 
+						        for (int i = 0; i < 4; i++) { 
+						            if (i < works.size()) {
+						                WorkBean work = works.get(i); 
+						                String postName = work.getPost_name();
+						                if (postName.length() > 30) {
+					                        postName = postName.substring(0, 26) + "...";
+					                    }%>
+					                    <div id="Othercontents" class="contents">
+						                <div class="contents">
+						                    <a href="#">
+						                    	<%= work.getPost_num() %>.
+						                        <%= postName %> 
+						                    </a>
+						                </div>
+						            <% } else { %>
+						                <div class="contents">
+						                <%= (i+1) %>.
+						                    <a href="#"><%= (i+1) %>번째 게시물입니다.</a>
+						                </div>
+						            <% } 
+						        	} 
+							    } else { %>
+							        <div class="contents">
+							            <p>게시물이 없습니다.</p>
+							        </div>
+							<% } %>
+                    	</div>
                     </div>
                     <div id="board2" class="boards">
                         <div class="boardHeader">
