@@ -239,12 +239,29 @@ button{
     border-radius: 10px 10px 0 0;
     text-align: center;
 }
+#board1 .boardHeader{
+    background:unset;
+}
+.Info{
+    cursor: pointer;
+}
+.Info:first-child{
+    color: var(--main-color);
+    background: var(--white);
+}
+.Info:last-child{
+    color: var(--white);
+    background: var(--main-color);
+}
 .boardContents{
     position: relative;
     width: 100%;
     height: 90%;
     border-radius: 0 0 20px 20px;
     background-color: var(--white);
+}
+#boardContents2{
+    display: none;
 }
 .contents{
     position: relative;
@@ -254,6 +271,21 @@ button{
 }
 .contents a{
     color: var(--black);
+}
+/* 취업 */
+.Info:last-child:focus~#boardContents1{
+    display: none;
+}
+.Info:last-child:focus~#boardContents2{
+    display: block;
+}
+.Info:last-child:focus~.Info:first-child{
+    color: var(--white);
+    background: var(--main-color);
+}
+.Info:last-child:focus{
+    color: var(--main-color);
+    background: var(--white);
 }
 /* 각종 링크들 */
 #linkContainer{
