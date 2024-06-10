@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <!-- css -->
+     <link rel="stylesheet" href="indexBoard.css">
+</head>
+<body>
+    <div id="container">
+        <div id="boardFace">
+            <h1 id="boardName">재학생 게시판</h1>
+            <form action="#" method="post">
+                <div id="searchBar">
+                    <table id="searchTable" class="table">
+                        <tr id="table1">
+                            <td id="select">
+                                <select>
+                                    <option name="title" value="title">제목</option>
+                                    <option name="context" value="dog">내용</option>
+                                </select>
+                            </td>
+                            <td id="search"><input name="searchContext" type="text"></td>
+                            <td id="submit"><button type="submit">조회</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+            <div id="boardHead">
+                <table class="table">
+                    <script>
+                        for (let i = 0; i < 10; i++) {
+                            document.write('<a href="#">');
+                            document.write('<tr class="table2">');
+                                document.write('<td id="number"><h3>번호</h3></td>');
+                                document.write('<td id="title"><h3>제목</h3></td>');
+                                document.write('<td id="userName"><h3>작성자</h3></td>');
+                                document.write('<td id="Writedate"><h3>작성일</h3></td>');
+                                document.write('<td id="seenNum"><h3>조회수</h3></td>');
+                            document.write('</tr>');
+                            document.write('</a>');
+                        }
+                    </script>
+                    <!-- <tr class="table2">
+                        <td id="number"><h3>번호</h3></td>
+                        <td id="title"><h3><a href="#">제목</a></h3></td>
+                        <td id="userName"><h3>작성자</h3></td>
+                        <td id="Writedate"><h3>작성일</h3></td>
+                        <td id="seenNum"><h3>조회수</h3></td>
+                    </tr> -->
+                </table>
+                <form id="btn" action="#" method="post">
+                    <button name="write" type="submit">작성</button>
+                    <button name="modify" type="submit">수정/삭제</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

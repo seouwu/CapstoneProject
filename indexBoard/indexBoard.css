@@ -1,0 +1,119 @@
+:root{
+    --main-color:#1C438F;
+    --shadown: rgba(236, 236, 236, 0.322);
+    --backgroundColor:rgb(217, 224, 238);
+    --black:rgb(44, 45, 46);
+    --white:rgb(252, 252, 252);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+#container{
+    position: relative;
+    width: 1400px;
+    margin: 10rem auto;
+
+}
+#container a{
+    color: var(--black);
+    text-decoration: none;
+}
+#boardName{
+    text-align: center;
+    margin: 1rem;
+}
+#boardface{
+    position: relative;
+    width: 90%;
+    text-align: center;
+}
+.table{
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--shadown);
+    text-align: center;
+}
+td{
+    height: 3rem;
+    padding: 1rem 0.5rem;
+    border: 1px solid rgb(179, 179, 179);
+}
+
+/* 검색바 */
+#searchTable{
+    border: none;
+    margin-bottom:1rem ;
+    background: var(--main-color);
+}
+#table1{
+    position: relative;
+    padding: 0;
+}
+#select select, #search input,#submit button{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+#select{
+    width: 10%;
+}
+#search{
+    position: relative;
+    width: 80%;
+}
+#search input{
+    padding: 0 1rem;
+}
+#submit{
+    width: 10%;
+}
+#submit button{
+    padding: 1rem;
+}
+/* 제목 같은거 나오는 곳 */
+.table2{
+    position: relative;
+}
+#number{
+    position: relative;
+    width: 5%;
+    color: var(--white);
+    background-color: var(--main-color);
+}
+#title{
+    width: 65%;
+    text-align: start;
+}
+#userName{
+    width: 10%;
+}
+#Writedate{
+    width: 10%;
+}
+#seenNum{
+    width: 10%;
+}
+/* 밑쪽 버튼 */
+#btn{
+    position: relative;
+    width:100%;
+    margin-top: 1rem;
+    text-align: end;
+}
+#btn button{
+    cursor: pointer;
+    position: relative;
+    width:10%;
+    height: 4rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    background: var(--main-color);
+}
