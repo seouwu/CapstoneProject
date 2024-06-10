@@ -56,3 +56,25 @@ var imagesBtn=[
     document.getElementById("img2").style,
     document.getElementById("img3").style
 ]
+// css 변경
+var content1=document.getElementById("boardContents1");
+var content2=document.getElementById("boardContents2")
+var board1btn1=document.getElementById("board1btn1");
+var board1btn2=document.getElementById("board1btn2");
+
+board1btn2.addEventListener("click",function(){
+    board1btn2.style.background="var(--white)";
+    board1btn2.style.color="var(--main-color)";
+    board1btn1.style.background="var(--main-color)";
+    board1btn1.style.color="var(--white)";
+    content1.style.display="none";
+    content2.style.display="block";
+})
+board1btn1.addEventListener("click",function(){
+    board1btn2.style.background="var(--main-color)";
+    board1btn2.style.color="var(--white)";
+    board1btn1.style.background="var(--white)";
+    board1btn1.style.color="var(--main-color)";
+    content1.style.display="block";
+    content2.style.display="none";
+})
