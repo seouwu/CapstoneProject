@@ -51,10 +51,10 @@
                 <div id="board">
                     <div id="board1" class="boards">
                         <div class="boardHeader">
-                            <div><a href="#">공지사항</a></div>
-                            <div><a href="#">취업 커뮤니티</a></div>
+                            <div id="board1btn1" class="Info">공지사항</div>
+                            <div id="board1btn2" class="Info">취업 커뮤니티</div>
                         </div>
-                        <div class="boardContents">
+                        <div id="boardContents1" class="boardContents">
                            <!-- 공지사항 (announce) 취업 (work)에 대한 java코드 필요 -->
                            <% if (anns != null && !anns.isEmpty()) { 
 						        for (int i = 0; i < 4; i++) { 
@@ -78,6 +78,20 @@
 							            <p>게시물이 없습니다.</p>
 							        </div>
 							<% } %>
+                        </div>
+			<div id="boardContents2" class="boardContents">
+                            <div id="Othercontents" class="contents">
+                                <a href="#">취업 1번째 내용입니다.</a>
+                            </div>
+                            <div class="contents">
+                                <a href="#">취업 2번째 내용입니다.</a>
+                            </div>
+                            <div class="contents">
+                                <a href="#">취업 3번째 내용입니다.</a>
+                            </div>
+                            <div class="contents">
+                                <a href="#">취업 4번째 내용입니다.</a>
+                            </div>
                         </div>
                     </div>
                     <div id="board2" class="boards">
