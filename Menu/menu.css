@@ -12,15 +12,12 @@
     list-style: none;
     text-decoration: none;
 }
-#wrap{
-    min-width:1440px;
-    margin: 0 auto;
-}
 /* 메뉴바 */
 header{
-    position: fixed;
+    position: relative;
     width: 100%;
-    min-width: 1500px;
+    max-width: 2000px;
+    /* min-width: 1400px; */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -34,6 +31,7 @@ header a{
 }
 #logo{
     width: 20%;
+    min-width: 300px;
     max-width: 20rem;
     padding: 1.5rem 1.5rem;
     background: var(--main-color);
@@ -44,86 +42,122 @@ header a{
 #menu{
     position: relative;
     width: 80%;
+    right: 0;
     display: flex;
     justify-content: space-evenly;
     padding-top: 2.5rem;
-    padding: auto;-bottom: 1.5rem;
 }
 .menus{
     position: absolute;
     width: 15%;
+    margin-bottom: 3rem;
 }
-.menus h3{
+.menus ul{
+    text-align: center;
+}
+.menus ul{
+    padding: 0rem;
     text-align: center;
     margin: 0 auto;
     cursor: pointer;
 }
-.menus h3:hover{
+.menus ul li:hover{
     color: var(--main-color);
 }
-.menus h3:hover~ div{
-    display: block;
-    color: var(--main-color);
-}
-.menus div a:hover~ div a{
-    display: block;
-}
-.menus div{
-    text-align: center;
-    font-weight: 900;
+[class*="subMenu"]{
+    padding: 1.5rem;
     display: none;
     background: var(--white);
 }
-.menus div a{
-    position: relative;
-    display: block;
-    padding: 2rem 1rem;
-    width: 100%;
-    font-size: 1.2rem;
-}
-.menus div a:hover{
-    display: block;
-    color: var(--white);
-    background:var(--main-color);
-}
+
 #login{
-    position: fixed;
+    position: absolute;
     top: 1rem;
-    right: 3rem;
+    right: 1rem;
     font-size: 0.8rem;
 }
 #exit,#menubar{
     font-size: 2rem;
     display: none;
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:900px) {
+    body{
+        overflow-x:hidden;
+        overflow-y: visible;
+    }
     #menubar{
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        margin-top: 1.5rem;
+        right: 1.5rem;
+    }
+    /* #menu{
         position: fixed;
+        width: 80%;
+        height: 100%;
+        right: 0;
+        display: flex;
+        background: var(--main-color);
+    } */
+    #exit{
+        cursor: pointer;
+        position:relative;
         display: block;
         top: 2rem;
-        right: 2rem;
-    }
-    #exit{
-        position: relative;
-        top: 2rem;
-        right: 2rem;
+        right: -100%;
+        font-size: 3rem;
+        z-index: 300;
     }
     #menu{
         position: absolute;
         width: 80%;
+        min-width: 80%;
         height: 100vh;
         padding: 5rem;
-        right: 0;
-        display: none;
+        right: -100%;
+        display: block;
         background: var(--white);
         box-shadow: -1rem 0  1rem var(--shadown);
         overflow-y: auto;
         z-index: 200;
     }
+    #menu div{
+        position: relative;
+        width: 15rem;
+        left: 0;
+    }
+    .menus{
+        position: relative;
+        width: 10%;
+        height: 20%;
+        display: grid;
+    }
     .menus{
         position: relative;
         width: 100%;
-        height: 20%;
-        display: flex;
+        font-size: 1.5rem;
     }
+    .menus ul{
+        text-align: center;
+    }
+    .menus ul{
+        padding: 0rem;
+        text-align: center;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    [class*="subMenu"]{
+        width: 100%;
+        padding: 1.5%;
+        display: none;
+        background: var(--white);
+    }
+    #login{
+        position: absolute;
+        top: 1rem;
+        left: 5%;
+        font-size: 1.5rem;
+        text-align: center;
+    } 
 }
