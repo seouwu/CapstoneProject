@@ -1,0 +1,52 @@
+:root{
+    --main-color:#1C438F;
+    --shadown: rgba(236, 236, 236, 0.322);
+    --backgroundColor:rgb(217, 224, 238);
+    --black:rgb(44, 45, 46);
+    --white:rgb(252, 252, 252);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    position: relative;
+    width: 100%;
+}
+#contentsBox{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+}
+#title{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+}
+.come{
+    position: relative;
+    display: grid;
+    place-items:center;
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    background: rgb(239, 242, 244);
+}
+#wayTocome{
+    display: grid;
+    height: 25rem;
+    padding: 2rem 2rem;
+}
+i{
+    font-size: 3.5rem;
+}
+span{
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    color: var(--white);
+    background: var(--main-color);
+}
