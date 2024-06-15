@@ -35,15 +35,15 @@ body{
 /* 세부칸 */
 #MajorContext{
     position: relative;
-    width: 70%;
-    height: 8rem;
+    width: 50%;
+    height: 4rem;
     margin: auto;
 }
 .GradeMajors{
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    height: 8rem;
+    height: 4rem;
     margin-bottom: 3rem;
     
 }
@@ -52,13 +52,13 @@ body{
     border-radius: 5px;
     color: black;
     background-color: rgb(234, 239, 240);
-    padding: 1rem;
+    padding: 0.5rem;
     
 }
 .majorName{
     position: relative;
-    width: 20%;
-    font-size: 1.5rem;
+    width: 45%;
+    font-size: 1rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -74,7 +74,7 @@ body{
 .majorInfo{
     width: 100%;
     text-align: start;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     inset: 0;
