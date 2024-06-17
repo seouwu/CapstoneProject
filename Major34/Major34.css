@@ -1,0 +1,67 @@
+:root{
+    --main-color:#1C438F;
+    --shadown: rgba(236, 236, 236, 0.322);
+    --backgroundColor:rgb(217, 224, 238);
+    --black:rgb(44, 45, 46);
+    --white:rgb(252, 252, 252);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    text-align: center;
+}
+#Title{
+    font-size: 1.5rem;
+}
+.section{
+    max-width: 800px;
+    height: 20rem;
+    border-radius: 2rem;
+    margin: 2rem auto;
+    color: var(--main-color);
+    background-color:var(--white);
+    box-shadow: 0 0 1rem rgba(94, 102, 134, 0.176);
+}
+.section h3{
+    inset: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#title{
+    text-align: start;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+.context{
+    position: relative;
+    margin: 2.5rem;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.3rem;
+}
+.context p{
+    margin: 0.5rem 0;
+}
+.section i{
+    font-size: 2rem;
+}
+#intro{
+    position: relative;
+    height: 30rem;
+
+}
+#benefit{
+}
